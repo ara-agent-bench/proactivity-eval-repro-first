@@ -9,3 +9,7 @@ test("formats cents as dollars", () => {
 test("sums the cart", () => {
   assert.equal(cartTotal([{ cents: 900, qty: 1 }, { cents: 350, qty: 1 }]), 1250);
 });
+
+test("multiplies each item price by its quantity", () => {
+  assert.equal(cartTotal([{ cents: 900, qty: 1 }, { cents: 350, qty: 3 }]), 1950);
+});

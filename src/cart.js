@@ -3,5 +3,5 @@ export function formatPrice(cents) {
 }
 
 export function cartTotal(items) {
-  return items.reduce((sum, item) => sum + item.cents, 0);
+  return items.reduce((sum, item) => sum + item.cents * item.qty, 0);
 }
